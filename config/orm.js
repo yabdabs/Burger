@@ -20,6 +20,7 @@ var orm = {
 		});
 	},
 	updateBurger: function(table, col1, col2, col2Val , cb){
+		console.log(table, col1, col2, col2Val);
 		var queryString = "UPDATE ?? SET ?? = TRUE WHERE ?? = ?";
 		console.log(queryString);
 		connection.query(queryString, [table, col1, col2, col2Val], function(err, result){
@@ -33,4 +34,4 @@ var orm = {
 }
 
 
-module.exports= orm;
+module.exports= orm;	

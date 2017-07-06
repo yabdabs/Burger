@@ -24,10 +24,11 @@
 
 		<div class="col-xs-6 middle">
 			<h1>Eat Da Burger</h1>
+			<img src="images/B5.jpg" class="burgerImage">
 
 			<form action="/addBurger" method= "POST">
 				<div class="form-group">
-					<textarea class=" input-lg" name="burgerInput"></textarea>
+					<textarea class="input-lg" name="burgerInput"></textarea>
 				</div>
 
 				<button class="btn btn-default" type="submit">Submit</button>
@@ -40,9 +41,9 @@
 				<ul>
 					{{#each burgs}}
 						{{#if this.devoured}}
-							<li>
-								<p>{{this.burger_name}}</p>
-							</li>
+							<li class= "list-group-item text">
+	          		<button type="submit" class="text list-group-item list-group-item-action disabled	 btn-primary">{{this.burger_name}}</button>
+		          </li>
 						{{/if}}
 					{{/each}}
 				</ul>

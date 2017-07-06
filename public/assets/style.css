@@ -27,15 +27,14 @@ ul{
 	padding-left:0;
 }
 
-.bod{
+/*.bod{
 	border: 1px solid red;
+}*/
+
+.burgerImage{
+	height: 200px;
 }
 
-.devour{
-	float: right;
-	display: inline-block;
-}
-
-.eatBurger{
-	display: inline;
+button.list-group-item.list-group-item-action.btn-primary{
+	color: white;
 }
