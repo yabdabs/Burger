@@ -14,7 +14,13 @@ router.post('/addBurger', function(req, res){
 		console.log(req.body.burgerInput);	
 		res.redirect('/');
 	});
-	
 });
 
+router.put('/:id', function(req, res){
+	console.log(req.params.id);
+	burger.updateBurger("devoured", "id", req.params.id, function(req,res){
+
+		res.redirect('/');
+	});
+});
 module.exports= router; 

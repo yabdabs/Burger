@@ -1,21 +1,28 @@
 <div class= "container">
 	<div class="row">
 		<div class="col-xs-3 bod">
-			<h3>Must East</h3>
+
 			<div class="burgers">
-				<ul>
+				<h3>Must East</h3>
+
+				<ul class="list-group">
 					{{#each burgs}}
 						{{#unless this.devoured}}
-							<li>
-				  	   <p>{{this.burger_name}}</p>
-				  		</li>
+
+							<form action="/{{this.id}}?_method=PUT" method="POST">
+			          	<input type="hidden" name="devour" value="true">
+			          	<li class= "list-group-item">
+			          		<button type="submit" class="list-group-item list-group-item-action btn-primary">{{this.burger_name}}</button>
+			          	</li>
+			       	</form>
+
 	 					{{/unless}}
 					{{/each}}
 	 			</ul>
 			</div>
 		</div>
 
-		<div class="col-xs-6 bod">
+		<div class="col-xs-6 middle">
 			<h1>Eat Da Burger</h1>
 
 			<form action="/addBurger" method= "POST">
@@ -28,8 +35,8 @@
 		</div>
 
 		<div class="col-xs-3 bod">
-			<h3>Already Eaten</h3>
 			<div class="burgersEaten">
+			<h3>Already Eaten</h3>
 				<ul>
 					{{#each burgs}}
 						{{#if this.devoured}}

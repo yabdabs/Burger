@@ -18,10 +18,18 @@ var orm = {
 
 			cb(result);
 		});
-	}	
-	// updateOne: function(){
+	},
+	updateBurger: function(table, col1, col2, col2Val , cb){
+		var queryString = "UPDATE ?? SET ?? = TRUE WHERE ?? = ?";
+		console.log(queryString);
+		connection.query(queryString, [table, col1, col2, col2Val], function(err, result){
+			console.log(queryString);
+			if(err) throw err;
+			console.log(result);
 
-	// }
+			cb(result);
+		})
+	}
 }
 
 

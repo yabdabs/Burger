@@ -10,3 +10,5 @@ CREATE TABLE burgers(
 	devoured BOOL default FALSE,
 	date TIMESTAMP DEFAULT  CURRENT_TIMESTAMP
 );
+
+drop table burgers;

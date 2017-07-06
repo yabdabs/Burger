@@ -11,6 +11,12 @@ var burger = {
 		orm.insertBurger('burgers', col1, burgerName, function(res){
 			cb(res);
 		});
+	},
+
+	updateBurger: function(col1, col1Val, col2, col2Val , cb){
+		orm.updateBurger('burgers', col1Val, col2, col2Val, function(res){
+			cb(res);
+		});
 	}
 }
 

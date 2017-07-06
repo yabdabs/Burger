@@ -1,16 +1,26 @@
-*{
+.middle{
 	text-align: center;
 }
 
-li{
-	list-style-type: none;
+/*li{
+	list-style-image: url('http://comps.canstockphoto.com/can-stock-photo_csp21663418.jpg');
 	height: 50px;
-	/*width: 300px;*/
+	border: 1px solid grey;
+}*/
+
+ul{
+	list-style-type: none;
+}
+
+li.eat{
+	list-style-image: url('/images/b4.jpg');
+	height: 50px;
 	border: 1px solid grey;
 }
 
 .burgers, .burgersEaten{
-	margin-top: 100px;
+	text-align: center;
+	padding-top: 100px;
 }
 
 ul{
@@ -19,4 +29,13 @@ ul{
 
 .bod{
 	border: 1px solid red;
+}
+
+.devour{
+	float: right;
+	display: inline-block;
+}
+
+.eatBurger{
+	display: inline;
 }
