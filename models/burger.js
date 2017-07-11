@@ -14,7 +14,7 @@ var burger = {
 	},
 
 	updateBurger: function(col1, col2, col2Val , cb){
-		orm.updateBurger('burgers',col1, col2, col2Val, function(res){
+		orm.updateBurger('burgers', col1, col2, col2Val, function(res){
 			cb(res);
 		});
 	}

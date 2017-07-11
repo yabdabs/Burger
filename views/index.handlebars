@@ -9,7 +9,7 @@
 					{{#each burgs}}
 						{{#unless this.devoured}}
 
-							<form action="/{{this.id}}?_method=PUT" method="POST">
+					<form action="/{{this.id}}?_method=PUT" method="POST">
 			          	<input type="hidden" name="devour" value="true">
 			          	<li class= "list-group-item">
 			          		<button type="submit" class="list-group-item list-group-item-action btn-primary">{{this.burger_name}}</button>
@@ -42,7 +42,7 @@
 					{{#each burgs}}
 						{{#if this.devoured}}
 							<li class= "list-group-item text">
-	          		<button type="submit" class="text list-group-item list-group-item-action disabled	 btn-primary">{{this.burger_name}}</button>
+	          		<button type="submit" class="text list-group-item list-group-item-action disabled btn-primary">{{this.burger_name}}</button>
 		          </li>
 						{{/if}}
 					{{/each}}
